@@ -1,0 +1,58 @@
+.wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form {
+    margin: 2rem;
+    width: 90%;
+}
+.form-group {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+input {
+    height: 3rem;
+    border: 1px solid #bababa;
+    border-radius: 5px;
+    align-content: stretch;
+    width:75%;
+}
+button {
+    background-color: #45a2c7;
+    color: #fafafa;
+    width: 100%;
+    padding: 1.5rem 0;
+    border: none;
+    font-size: 24px;
+}
+.offers {
+    margin: 2rem;
+    width: 90%;
+}
+p{
+    color: #d15050;
+    font-size: 16px;
+}
+.results {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #5a5a5a;
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    background-color: #e0e0e0;
+    font-size: 24px;
+}
+span{
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #5a5a5a;
+    padding: 0.5rem 0;
+}

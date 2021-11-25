@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <form (ngSubmit)="getOffers()">
+    <div class="form-group">
+      <label for="km">Количество километров</label>
+      <input type="number" min="1" id="km" [(ngModel)]="this.distance" name="distance" required />
+    </div>
+    <div class="form-group">
+      <label for="km">Возраст</label>
+      <input type="number" min="0" id="km" [(ngModel)]="this.age" name="age" required />
+    </div>
+    <div class="form-group">
+      <label for="km">Вес багажа</label>
+      <input type="number" min="0" id="km" [(ngModel)]="this.baggage" name="baggage" required />
+    </div>
+
+    <button type='submit'>Рассчитать</button>
+
+  </form>
+
+  <div *ngIf="this.error" class="error">
+    <p>Введены некорректные данные!</p>
+  </div>
+
+  <div class="offers" *ngIf="this.submitted">
+    <h2>Предложения</h2>
+    <h3 *ngIf="this.noOffers">Нет предложений для поездки</h3>
+    <div class = "results" *ngIf="!this.noOffers">
+      <span class="heading">Аэрофлот</span>
+      <span *ngIf="this.priceMap.get('aEconom')">Эконом: {{this.priceMap.get('aEconom')}} &#8381;</span>
+      <span *ngIf="this.priceMap.get('aMiddle')">Продвинутый: {{this.priceMap.get('aMiddle')}} &#8381;</span>
+      <span *ngIf="this.priceMap.get('aLux')">Люкс: {{this.priceMap.get('aLux')}} &#8381;</span>
+      <span class="heading">РЖД</span>
+      <span *ngIf="this.priceMap.get('rEconom')">Эконом: {{this.priceMap.get('rEconom')}} &#8381;</span>
+      <span *ngIf="this.priceMap.get('rMiddle')">Продвинутый: {{this.priceMap.get('rMiddle')}} &#8381;</span>
+      <span *ngIf="this.priceMap.get('rLux')">Люкс: {{this.priceMap.get('rLux')}} &#8381;</span>
+    </div>
+  </div>
+</div>
